@@ -1,7 +1,9 @@
+
 const sgMail = require('@sendgrid/mail');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 exports.handler = async (event) => {
+  console.log("Enter functions");
   const { name, email, message } = JSON.parse(event.body);
 
   const msg = {
@@ -10,7 +12,7 @@ exports.handler = async (event) => {
     subject: 'Thanks for contacting us!',
     text: `Hi ${name},\n\nWe received your message:\n\"${message}\"\n\nWe'll get back to you soon.\n\nBest,\nYour Team`
   };
-
+console.log("Enter",msg);
   try {
     await sgMail.send(msg);
     return {

@@ -1,4 +1,4 @@
-console.log("Enter functions");
+
 
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
