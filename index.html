@@ -41,23 +41,24 @@
       <!-- Business Information -->
       <div class="col-md-12 form-group">
         <label class="form-label">Size of Company: <span class="required">*</span></label><br>
-        <div class="form-check"><input type="checkbox" name="Size of Company" value="1–10 employees" required> 1–10 employees</div>
-        <div class="form-check"><input type="checkbox" name="Size of Company" value="11–50 employees"> 11–50 employees</div>
-        <div class="form-check"><input type="checkbox" name="Size of Company" value="51–100 employees"> 51–100 employees</div>
-        <div class="form-check"><input type="checkbox" name="Size of Company" value="101–200 employees"> 101–200 employees</div>
-        <div class="form-check"><input type="checkbox" name="Size of Company" value="200+ employees"> 200+ employees</div>
+        <div class="form-check"><input type="radio" name="Size of Company" value="1–10 employees" > 1–10 employees</div>
+        <div class="form-check"><input type="radio" name="Size of Company" value="11–50 employees"> 11–50 employees</div>
+        <div class="form-check"><input type="radio" name="Size of Company" value="51–100 employees"> 51–100 employees</div>
+        <div class="form-check"><input type="radio" name="Size of Company" value="101–200 employees"> 101–200 employees</div>
+        <div class="form-check"><input type="radio" name="Size of Company" value="200+ employees"> 200+ employees</div>
       </div>
 
       <div class="col-md-12 form-group">
         <label class="form-label">Is your organization currently CSA-certified under Cyber Essentials or Cyber Trust? <span class="required">*</span></label><br>
-        <div class="form-check"><input type="radio" name="CSA Certified" value="Yes" required> Yes</div>
+        <div class="form-check"><input type="radio" name="CSA Certified" value="Yes"> Yes</div>
         <div class="form-check"><input type="radio" name="CSA Certified" value="No"> No</div>
         <div class="form-check"><input type="radio" name="CSA Certified" value="Not sure"> Not sure</div>
       </div>
 
       <!-- Event Participation -->
       <div class="col-md-12 form-group">
-        <textarea class="form-control" name="What are you hoping to learn from this session?" rows="2" placeholder="What are you hoping to learn from this session?" required></textarea>
+        <label class="form-label"> What are you hoping to learn from this session?</label>
+        <textarea class="form-control" name="What are you hoping to learn from this session?" rows="2" required></textarea>
       </div>
 
       <div class="col-md-12 form-group">
