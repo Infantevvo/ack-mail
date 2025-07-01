@@ -5,8 +5,8 @@ document.getElementById("contactForm").addEventListener("submit", async function
   const form = e.target;
   const formData = new FormData(form);
 
-  const name = formData.get("name");
-  const email = formData.get("email");
+  const name = formData.get("Full Name");
+  const email = formData.get("Business Email Address");
   //const message = formData.get("message");
 
   await fetch("/", { method: "POST", body: formData });
