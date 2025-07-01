@@ -1,3 +1,5 @@
+console.log("Enter functions");
+
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
   const form = e.target;
@@ -9,7 +11,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   await fetch("/", { method: "POST", body: formData });
 
-  await fetch("/netlify/functions/send-email2", {
+  await fetch("/.netlify/functions/send-email", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, message })
