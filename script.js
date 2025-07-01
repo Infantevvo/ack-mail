@@ -9,7 +9,7 @@ document.getElementById("contactForm").addEventListener("submit", async function
 
   await fetch("/", { method: "POST", body: formData });
 
-  await fetch("../netlify/functions/send-email", {
+  await fetch("/netlify/functions/send-email2", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, message })

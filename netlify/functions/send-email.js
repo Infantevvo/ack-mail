@@ -6,7 +6,7 @@ exports.handler = async (event) => {
 
   const msg = {
     to: email,
-    from: 'arockiainfant@evvotechnology.com',
+    from: 'infantraj3211@gmail.com',
     subject: 'Thanks for contacting us!',
     text: `Hi ${name},\n\nWe received your message:\n\"${message}\"\n\nWe'll get back to you soon.\n\nBest,\nYour Team`
   };
