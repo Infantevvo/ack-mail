@@ -10,7 +10,7 @@ exports.handler = async (event) => {
     to: email,
     from: 'infantraj3211@gmail.com',
     subject: 'Thanks for contacting us!',
-    text: `Hi ${name},\n\nWe received your message:\n\"${message}\"\n\nWe'll get back to you soon.\n\nBest,\nYour Team`
+    text: `Hi ${name},\n\nWe'll get back to you soon.\n\nBest,\nYour Team`
   };
 console.log("Enter",msg);
   try {
