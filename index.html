@@ -1,19 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact Form</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div class="container mt-5">
+    <h1 class="text-center">Event Registration Form</h1>
+    <br>
+
   <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contactForm">
-    <input type="text" name="name" id="name" placeholder="Your Name" required />
-    <input type="email" name="email" id="email" placeholder="Your Email" required />
-    <textarea name="message" id="message" rows="4" placeholder="Your Message" required></textarea>
+    <div class="col-md-12 form-group">
+        <label for="fullName" class="form-label">Full Name<span class="required">*</span></label>
+        <input type="text" class="form-control" id="fullName" name="Full Name" placeholder="Enter Full Name" required>
+      </div>
 
-   
+      <div class="col-md-12 form-group">
+        <label for="designation" class="form-label">Designation / Job Title<span class="required">*</span></label>
+        <input type="text" class="form-control" id="designation" name="Designation / Job Title" placeholder="Enter Designation or Job Title" required>
+      </div>
 
-    <button type="submit">Send Message</button>
+      <div class="col-md-12 form-group">
+        <label for="company" class="form-label">Company / Organization Name<span class="required">*</span></label>
+        <input type="text" class="form-control" id="company" name="Company / Organization Name" placeholder="Enter Company Name" required>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label for="email" class="form-label">Business Email Address<span class="required">*</span></label>
+        <input type="email" class="form-control" id="email" name="Business Email Address" placeholder="Enter Business Email" required>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label for="mobile" class="form-label">Mobile Number (Optional)</label>
+        <input type="text" class="form-control" id="mobile" name="Mobile Number" placeholder="Enter Mobile Number">
+      </div>
+
+      <!-- Business Information -->
+      <div class="col-md-12 form-group">
+        <label class="form-label">Size of Company: <span class="required">*</span></label><br>
+        <div class="form-check"><input type="checkbox" name="Size of Company" value="1–10 employees" required> 1–10 employees</div>
+        <div class="form-check"><input type="checkbox" name="Size of Company" value="11–50 employees"> 11–50 employees</div>
+        <div class="form-check"><input type="checkbox" name="Size of Company" value="51–100 employees"> 51–100 employees</div>
+        <div class="form-check"><input type="checkbox" name="Size of Company" value="101–200 employees"> 101–200 employees</div>
+        <div class="form-check"><input type="checkbox" name="Size of Company" value="200+ employees"> 200+ employees</div>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label class="form-label">Is your organization currently CSA-certified under Cyber Essentials or Cyber Trust? <span class="required">*</span></label><br>
+        <div class="form-check"><input type="radio" name="CSA Certified" value="Yes" required> Yes</div>
+        <div class="form-check"><input type="radio" name="CSA Certified" value="No"> No</div>
+        <div class="form-check"><input type="radio" name="CSA Certified" value="Not sure"> Not sure</div>
+      </div>
+
+      <!-- Event Participation -->
+      <div class="col-md-12 form-group">
+        <textarea class="form-control" name="What are you hoping to learn from this session?" rows="2" placeholder="What are you hoping to learn from this session?" required></textarea>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label class="form-label">Would you like to receive follow-up support for Cyber Essentials certification? <span class="required">*</span></label><br>
+        <div class="form-check"><input type="radio" name="Follow-up Support" value="Yes, please contact me." required> Yes, please contact me.</div>
+        <div class="form-check"><input type="radio" name="Follow-up Support" value="No, just attending for information."> No, just attending for information.</div>
+      </div>
+
+      <!-- Consent & Marketing -->
+      <div class="col-md-12 form-group">
+        <label class="form-label">Where did you hear about this event? <span class="required">*</span></label><br>
+        <div class="form-check"><input type="checkbox" name="Referral Source" value="SMF Email" required> SMF Email</div>
+        <div class="form-check"><input type="checkbox" name="Referral Source" value="Social Media"> Social Media</div>
+        <div class="form-check"><input type="checkbox" name="Referral Source" value="Referral / Word of Mouth"> Referral / Word of Mouth</div>
+        <input type="text" class="form-control mt-2" name="Referral Source Other" placeholder="Other (please specify)">
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label class="form-label">I consent to the collection and use of my information for event purposes, in line with PDPA regulations. <span class="required">*</span></label><br>
+        <div class="form-check"><input type="checkbox" name="PDPA Consent" value="Yes" required> Yes</div>
+      </div>
+
+      <div class="col-md-12 form-group">
+        <label class="form-label">I would like to receive future updates from Evvo Labs <span class="required">*</span></label><br>
+        <div class="form-check"><input type="radio" name="Future Updates" value="Yes" required> Yes</div>
+        <div class="form-check"><input type="radio" name="Future Updates" value="No"> No</div>
+      </div>
+
+      <!-- Netlify reCAPTCHA -->
+      <div class="col-md-12 form-group" data-netlify-recaptcha="true"></div>
+
+      <!-- Submit -->
+      <div class="col-md-12 text-center">
+        <button type="submit" value="submit" class="btn btn-primary">Submit</button>
+      </div>
   </form>
 
   <script src="script.js"></script>
